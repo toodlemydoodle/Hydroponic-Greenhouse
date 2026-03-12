@@ -1,4 +1,4 @@
-# 4TR3 Final Report: Aquaponic System
+# Aquaponic System
 
 This README now contains the contents extracted from `Final_4TR3 Final Report.pdf`.
 
