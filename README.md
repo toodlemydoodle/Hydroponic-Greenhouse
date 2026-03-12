@@ -4,17 +4,7 @@ This README now contains the contents extracted from `Final_4TR3 Final Report.pd
 
 ## Cover Page
 
-PROCTECH 4TR 3
-Final Report
-
 Aquaponic System
-
-Dr. Zhen Gao
-
-George Chen 001331928
-Keven Gao 400243256
-
-NOTE: By including our names on the cover, we hereby acknowledge that the work is our own. We also acknowledge that the work was done at McMaster under our supervisor. By printing our name on the electronic copy, we acknowledge that this is equivalent to signing our signature on the document.
 
 ---
 
