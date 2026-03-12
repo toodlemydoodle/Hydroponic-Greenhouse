@@ -121,6 +121,18 @@ The basket in the middle is where plants grow. A pump takes fish tank water to t
 - The PDF content is now embedded in this README.
 - The original PDF and DOCX files are not tracked in GitHub but can be stored externally in a `releases/` or `docs/` archive.
 
+## Report images (from Final_4TR3 Final Report.pdf)
+
+The following images are automatically extracted from the original report PDF pages:
+
+![Report page 1](assets/report_images/page_1.png)
+
+![Report page 2](assets/report_images/page_2.png)
+
+![Report page 3](assets/report_images/page_3.png)
+
+![Report page 4](assets/report_images/page_4.png)
+
 ## Original report path (local)
 
 - `Final_4TR3 Final Report.pdf` (local backup)
