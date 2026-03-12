@@ -108,13 +108,9 @@ The automation of the project will slightly change due to cost. Ammonia, nitrate
 
 ##### Visuals from report
 
-![Report page 1](assets/report_images/page_1.png)
+![System Overview](assets/report_images/page_1.png)
 
-![Report page 2](assets/report_images/page_2.png)
-
-![Report page 3](assets/report_images/page_3.png)
-
-![Report page 4](assets/report_images/page_4.png)
+![Data Processing Flow](assets/report_images/page_2.png)
 
 #### Second Draft
 
