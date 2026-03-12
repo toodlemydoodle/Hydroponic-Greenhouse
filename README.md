@@ -106,6 +106,16 @@ The design of the automated aquaponics system includes:
 
 The automation of the project will slightly change due to cost. Ammonia, nitrate, and nitrite sensors do not have cheap options; they are mainly industrial. These chemical levels will need to be checked monthly with an at-home aquarium testing kit. Other than monthly check-ins, the system is designed to be hands off until an alert notifies the user.
 
+##### Visuals from report
+
+![Report page 1](assets/report_images/page_1.png)
+
+![Report page 2](assets/report_images/page_2.png)
+
+![Report page 3](assets/report_images/page_3.png)
+
+![Report page 4](assets/report_images/page_4.png)
+
 #### Second Draft
 
 The second design adds moisture sensors to the plant area ensuring water is being absorbed in the soil. This moisture sensor can indicate blockages at the return line to the fish tank, causing flooding indicators. The second flow transmitter was removed as too redundant. A single flow transmitter at the pump output suffices.
@@ -120,18 +130,6 @@ The basket in the middle is where plants grow. A pump takes fish tank water to t
 
 - The PDF content is now embedded in this README.
 - The original PDF and DOCX files are not tracked in GitHub but can be stored externally in a `releases/` or `docs/` archive.
-
-## Report images (from Final_4TR3 Final Report.pdf)
-
-The following images are automatically extracted from the original report PDF pages:
-
-![Report page 1](assets/report_images/page_1.png)
-
-![Report page 2](assets/report_images/page_2.png)
-
-![Report page 3](assets/report_images/page_3.png)
-
-![Report page 4](assets/report_images/page_4.png)
 
 ## Original report path (local)
 
