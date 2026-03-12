@@ -94,7 +94,7 @@ An automatic feeding system has been developed and is shown in the later section
 
 ### Project Implementation
 
-#### First Draft (4TR1 - Midterm)
+#### First Draft
 
 The design of the automated aquaponics system includes:
 
@@ -106,11 +106,11 @@ The design of the automated aquaponics system includes:
 
 The automation of the project will slightly change due to cost. Ammonia, nitrate, and nitrite sensors do not have cheap options; they are mainly industrial. These chemical levels will need to be checked monthly with an at-home aquarium testing kit. Other than monthly check-ins, the system is designed to be hands off until an alert notifies the user.
 
-#### Second Draft (4TR1 - Final)
+#### Second Draft
 
 The second design adds moisture sensors to the plant area ensuring water is being absorbed in the soil. This moisture sensor can indicate blockages at the return line to the fish tank, causing flooding indicators. The second flow transmitter was removed as too redundant. A single flow transmitter at the pump output suffices.
 
-#### Current Design (4TR3 - Midterm)
+#### Current Design
 
 The current iteration is the final design and working prototype. The aim was to make the design compact with a removable frame on the fish tank. Compact design allows components to be closer, a modular system, and lower expense.
 
