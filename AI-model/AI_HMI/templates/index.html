@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lettuce AI HMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="hmi-container">
+      <h1>Lettuce AI HMI</h1>
+
+      <div class="card lettuce-card">
+        <div class="label-row">
+          <span class="label">Lettuce NPK Status</span>
+          <span id="lettuce-status-chip" class="status">Not checked yet</span>
+        </div>
+
+        <div class="prob-row">
+          <span class="prob-label">Model confidence (top class):</span>
+          <span id="lettuce-prob" class="prob-value">--</span>
+        </div>
+
+        <div class="last-check-row">
+          <span id="lettuce-last-check" class="last-check">
+            Last check: --
+          </span>
+        </div>
+
+        <button id="lettuce-check-btn" class="ai-btn">
+          Check Lettuce
+        </button>
+
+        <div class="image-row">
+          <img
+            id="lettuce-image"
+            class="lettuce-image"
+            src=""
+            alt="Lettuce snapshot"
+          />
+        </div>
+
+        <div id="lettuce-error" class="error-msg"></div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

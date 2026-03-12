@@ -1,0 +1,14 @@
+[Unit]
+Description=Lettuce AI Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/toodlemydoodle/lettuce_ai/lettuceAI.py
+WorkingDirectory=/home/toodlemydoodle/lettuce_ai
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arduino Sensor Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #222;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+    .label {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .value {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+    .status {
+      margin-top: 6px;
+      font-size: 0.9rem;
+    }
+    .status-ok {
+      color: #4caf50;
+    }
+    .status-warn {
+      color: #ff9800;
+    }
+    .status-bad {
+      color: #f44336;
+    }
+    #last-update {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Arduino Sensor Dashboard</h1>
+  <div id="last-update">Last update: --</div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="label">Ambient Light</div>
+      <div class="value" id="ambient">--</div>
+      <div class="status" id="ambient-status"></div>
+    </div>
+    <div class="card">
+      <div class="label">UV</div>
+      <div class="value" id="uv">--</div>
+      <div class="status" id="uv-status"></div>
+    </div>
+    <div class="card">
+      <div class="label">Temperature (°C)</div>
+      <div class="value" id="temp">--</div>
+      <div class="status" id="temp-status"></div>
+    </div>
+    <div class="card">
+      <div class="label">Flow</div>
+      <div class="value" id="flow">--</div>
+      <div class="status" id="flow-status"></div>
+    </div>
+    <div class="card">
+      <div class="label">Low Level Switch</div>
+      <div class="value" id="lowState">--</div>
+      <div class="status" id="low-status"></div>
+    </div>
+    <div class="card">
+      <div class="label">High Level Switch</div>
+      <div class="value" id="highState">--</div>
+      <div class="status" id="high-status"></div>
+    </div>
+  </div>
+
+  <script>
+    async function fetchData() {
+      try {
+        const res = await fetch("/data");
+        const data = await res.json();
+
+        // Update numbers
+        document.getElementById("ambient").textContent = data.ambient.toFixed(1) + " %";
+        document.getElementById("uv").textContent = data.uv.toFixed(1) + " %";
+        document.getElementById("temp").textContent = data.temp.toFixed(1);
+        document.getElementById("flow").textContent = data.flow.toFixed(2);
+        document.getElementById("lowState").textContent = data.lowState;
+        document.getElementById("highState").textContent = data.highState;
+
+        // Simple status logic examples (tweak for your system)
+        const ambStatus = document.getElementById("ambient-status");
+        if (data.ambient < 20) {
+          ambStatus.textContent = "Low light";
+          ambStatus.className = "status status-warn";
+        } else {
+          ambStatus.textContent = "OK";
+          ambStatus.className = "status status-ok";
+        }
+
+        const tempStatus = document.getElementById("temp-status");
+        if (data.temp < 15 || data.temp > 30) {
+          tempStatus.textContent = "Out of range";
+          tempStatus.className = "status status-bad";
+        } else {
+          tempStatus.textContent = "OK";
+          tempStatus.className = "status status-ok";
+        }
+
+        const flowStatus = document.getElementById("flow-status");
+        if (data.flow <= 0.1) {
+          flowStatus.textContent = "No flow";
+          flowStatus.className = "status status-bad";
+        } else {
+          flowStatus.textContent = "Flowing";
+          flowStatus.className = "status status-ok";
+        }
+
+        const lowStatus = document.getElementById("low-status");
+        lowStatus.textContent = data.lowState === 0 ? "LOW (active)" : "HIGH (inactive)";
+        lowStatus.className = data.lowState === 0
+          ? "status status-ok"
+          : "status";
+
+        const highStatus = document.getElementById("high-status");
+        highStatus.textContent = data.highState === 1 ? "HIGH (active)" : "LOW (inactive)";
+        highStatus.className = data.highState === 1
+          ? "status status-ok"
+          : "status";
+
+        // Last update time
+        const now = new Date();
+        document.getElementById("last-update").textContent =
+          "Last update: " + now.toLocaleTimeString();
+
+      } catch (err) {
+        console.error("Error fetching data:", err);
+        document.getElementById("last-update").textContent =
+          "Last update: error (see console)";
+      }
+    }
+
+    // Poll the backend every 500 ms
+    fetchData();
+    setInterval(fetchData, 500);
+  </script>
+</body>
+</html>

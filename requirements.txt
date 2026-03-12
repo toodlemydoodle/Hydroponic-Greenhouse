@@ -1,0 +1,9 @@
+flask
+flask-socketio
+requests
+opencv-python
+torch
+torchvision
+Pillow
+matplotlib
+pyserial
