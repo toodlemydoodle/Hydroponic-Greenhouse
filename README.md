@@ -91,7 +91,7 @@ The design of the automated aquaponics system includes:
 
 The automation of the project will slightly change due to cost. Ammonia, nitrate, and nitrite sensors do not have cheap options; they are mainly industrial. These chemical levels will need to be checked monthly with an at-home aquarium testing kit. Other than monthly check-ins, the system is designed to be hands off until an alert notifies the user.
 h
-![First Draft System Diagram](assets/report_images/Autofeeder.png)
+![First Draft System Diagram](assets/report_images/FirstDraft.png)
 
 #### Second Draft
 
