@@ -97,7 +97,7 @@ h
 
 The second design adds moisture sensors to the plant area ensuring water is being absorbed in the soil. This moisture sensor can indicate blockages at the return line to the fish tank, causing flooding indicators. The second flow transmitter was removed as too redundant. A single flow transmitter at the pump output suffices.
 
-![Second Draft System Diagram](assets/report_images/CurrentDraft_1.png)
+![Second Draft System Diagram](assets/report_images/SecondDraft_1.png)
 ![Second Draft System Diagram 2](assets/report_images/SecondDraft_2.png)
 #### Current Design
 
