@@ -90,24 +90,24 @@ The design of the automated aquaponics system includes:
 - light management with an on/off switch.
 
 The automation of the project will slightly change due to cost. Ammonia, nitrate, and nitrite sensors do not have cheap options; they are mainly industrial. These chemical levels will need to be checked monthly with an at-home aquarium testing kit. Other than monthly check-ins, the system is designed to be hands off until an alert notifies the user.
-
-![First Draft System Diagram](assets\report_images\Autofeeder.png)
+h
+![First Draft System Diagram](assets/report_images/Autofeeder.png)
 
 #### Second Draft
 
 The second design adds moisture sensors to the plant area ensuring water is being absorbed in the soil. This moisture sensor can indicate blockages at the return line to the fish tank, causing flooding indicators. The second flow transmitter was removed as too redundant. A single flow transmitter at the pump output suffices.
 
-![Second Draft System Diagram](assets\report_images\CurrentDraft_1.png)
-![Second Draft System Diagram 2](assets\report_images\SecondDraft_2.png)
+![Second Draft System Diagram](assets/report_images/CurrentDraft_1.png)
+![Second Draft System Diagram 2](assets/report_images/SecondDraft_2.png)
 #### Current Design
 
 The current iteration is the final design and working prototype. The aim was to make the design compact with a removable frame on the fish tank. Compact design allows components to be closer, a modular system, and lower expense.
 
 The basket in the middle is where plants grow. A pump takes fish tank water to the plant basket. Microcontrollers, breadboards, sensors, switches, and pumps are mounted on side planks. A drain in the basket returns water.
 
-![Current Design Frame Views 1](assets\report_images\CurrentDraft_1.png)
+![Current Design Frame Views 1](assets/report_images/CurrentDraft_1.png)
 
-![Current Design Frame Views 2](assets\report_images\CurrentDraft_2.png)
+![Current Design Frame Views 2](assets/report_images/CurrentDraft_2.png)
 
 #### Auto-Feeder
 Auto Feeder Design 
@@ -116,7 +116,7 @@ setup in an enclosed space. When it is time for feeding, the turbine is connecte
 motor, which will spin pushing food into a hole. This design is a recreation inspired by 
 aquarium fish feeders from online [4].
 
-![Auto Feeder Design](assets\report_images\Autofeeder.png)
+![Auto Feeder Design](assets/report_images/Autofeeder.png)
 
 #### Parts List
 
@@ -162,15 +162,15 @@ classification folders. There are four classes: 0_FN (healthy), 1_N (nitrogen de
 Data are transformed through horizontally flipped, rotated, blurred, and reduced sharpness to 
 reflect the images coming from the camera. The HMI from AI will be a separate port. 
 
-![HMI and Sensor Integration](assets\report_images\SystemOverview.png)
+![HMI and Sensor Integration](assets/report_images/SystemOverview.png)
 
 #### HMI for Sensors + Autofeeder
 
-![Hydroponic HMI Screenshot](assets\report_images\HMI_1.png)
+![Hydroponic HMI Screenshot](assets/report_images/HMI_1.png)
 
 #### HMI for AI
 
-![Lettuce AI HMI Screenshot](assets\report_images\HMI_2.png)
+![Lettuce AI HMI Screenshot](assets/report_images/HMI_2.png)
 
 ## Conclusion
 
