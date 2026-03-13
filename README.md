@@ -1,13 +1,5 @@
 # Aquaponic System
 
-This README now contains the contents extracted from `Final_4TR3 Final Report.pdf`.
-
-## Cover Page
-
-Aquaponic System
-
----
-
 ## Table of Contents
 
 - Abstract
@@ -20,16 +12,10 @@ Aquaponic System
     - First Draft
     - Second Draft
     - Current Design
-  - Electrical Design
-  - Analog Channels
-  - Digital Channels
   - Auto Feeder Design
   - Parts List
-  - Integration of AI
   - System Overview
   - HMI and Data Acquisition
-  - Sensor Data
-  - Discussion
   - Conclusion
   - References
 
@@ -91,7 +77,7 @@ The components can be bought at several places. We will also look for the cheape
 
 An automatic feeding system has been developed and is shown in the later section of the report. The parts will most likely be 3D printed and have been designed using AutoCAD Fusion. All aspects of automation will be controlled by the microcontroller, and data will be sent to the cloud, where the user can monitor and be notified to check on system parameters.
 
-### Project Implementation
+## Project Implementation
 
 #### First Draft
 
@@ -105,30 +91,23 @@ The design of the automated aquaponics system includes:
 
 The automation of the project will slightly change due to cost. Ammonia, nitrate, and nitrite sensors do not have cheap options; they are mainly industrial. These chemical levels will need to be checked monthly with an at-home aquarium testing kit. Other than monthly check-ins, the system is designed to be hands off until an alert notifies the user.
 
-##### First Draft Visual Timeline
-
-1. System Overview (page_1.png)
-2. Data Processing Flow (page_2.png)
-3. Second Draft System Diagram (page_3.png)
-4. Current Design Frame Views (page_4.png)
-
-![System Overview](assets/report_images/page_1.png)
-
-![Data Processing Flow](assets/report_images/page_2.png)
-
-![Second Draft System Diagram](assets/report_images/page_3.png)
-
-![Current Design Frame Views](assets/report_images/page_4.png)
+![First Draft System Diagram](assets\report_images\Autofeeder.png)
 
 #### Second Draft
 
 The second design adds moisture sensors to the plant area ensuring water is being absorbed in the soil. This moisture sensor can indicate blockages at the return line to the fish tank, causing flooding indicators. The second flow transmitter was removed as too redundant. A single flow transmitter at the pump output suffices.
 
+![Second Draft System Diagram](assets\report_images\CurrentDraft_1.png)
+![Second Draft System Diagram 2](assets\report_images\SecondDraft_2.png)
 #### Current Design
 
 The current iteration is the final design and working prototype. The aim was to make the design compact with a removable frame on the fish tank. Compact design allows components to be closer, a modular system, and lower expense.
 
 The basket in the middle is where plants grow. A pump takes fish tank water to the plant basket. Microcontrollers, breadboards, sensors, switches, and pumps are mounted on side planks. A drain in the basket returns water.
+
+![Current Design Frame Views 1](assets\report_images\CurrentDraft_1.png)
+
+![Current Design Frame Views 2](assets\report_images\CurrentDraft_2.png)
 
 #### Auto-Feeder
 Auto Feeder Design 
@@ -136,6 +115,8 @@ The initial design of an auto feeder system is shown below. The design is a simp
 setup in an enclosed space. When it is time for feeding, the turbine is connected to a 
 motor, which will spin pushing food into a hole. This design is a recreation inspired by 
 aquarium fish feeders from online [4].
+
+![Auto Feeder Design](assets\report_images\Autofeeder.png)
 
 #### Parts List
 
@@ -181,15 +162,15 @@ classification folders. There are four classes: 0_FN (healthy), 1_N (nitrogen de
 Data are transformed through horizontally flipped, rotated, blurred, and reduced sharpness to 
 reflect the images coming from the camera. The HMI from AI will be a separate port. 
 
-> Note: the images referenced (page_5.png, hmi_screenshot.png, hmi_ai_screenshot.png) are not currently present in `assets/report_images`.
+![HMI and Sensor Integration](assets\report_images\SystemOverview.png)
 
 #### HMI for Sensors + Autofeeder
 
-Description and placeholders for sensor/auto-feeder HMI images.
+![Hydroponic HMI Screenshot](assets\report_images\HMI_1.png)
 
 #### HMI for AI
 
-Description and placeholders for AI HMI images.
+![Lettuce AI HMI Screenshot](assets\report_images\HMI_2.png)
 
 ## Conclusion
 
